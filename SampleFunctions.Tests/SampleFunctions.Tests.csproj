@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\source\Sample Functions\SampleFunctions.csproj" />
-    <ProjectReference Include="..\source\SampleFunctions.Data\SampleFunctions.Data.csproj" />
+    <ProjectReference Include="..\SampleFunctions.Data\SampleFunctions.Data.csproj" />
+    <ProjectReference Include="..\SampleFunctions\SampleFunctions.csproj" />
   </ItemGroup>
 
 </Project>
