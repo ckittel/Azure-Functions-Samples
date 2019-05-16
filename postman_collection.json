@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "f57db041-74db-43a0-ac7b-dbf98f4afc67",
+		"name": "My Samples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OnGetStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/students",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OnGetStudent / guid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/students/2b38e454-e3d2-4eb6-82c1-300de76ed4e9",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"students",
+						"2b38e454-e3d2-4eb6-82c1-300de76ed4e9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OnAddStudent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Navneet\"\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/api/students?code=Y1szazKwDUUwNA1W7nI4t/yRkxyJk4oNOT/8V5qtyV81LoKswV87oA==",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"students"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "Y1szazKwDUUwNA1W7nI4t/yRkxyJk4oNOT/8V5qtyV81LoKswV87oA=="
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OnGetStudent / int",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/students/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"students",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OnAddStudent to Cosmos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Sandeep\"\n}"
+				},
+				"url": {
+					"raw": "{{domain}}/api/v2/students",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddToQueue",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "My message I want added"
+				},
+				"url": {
+					"raw": "{{domain}}/api/messages",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetConfigValue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/configValue",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"configValue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStaticState (1 and 2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ba9b5eb2-dea7-43ad-8a5d-0ab83155ef9a",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/static/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"static",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0b923629-0c2a-4e77-b40a-905d6f0ecd25",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4b53bb2d-2efd-43e1-8fd8-b8a7112d7f42",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d423b30d-6808-448f-a8ca-ce60086e0116",
+			"key": "domain",
+			"value": "http://localhost:7071",
+			"type": "string"
+		}
+	]
+}
