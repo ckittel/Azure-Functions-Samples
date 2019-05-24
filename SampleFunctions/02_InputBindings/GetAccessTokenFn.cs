@@ -9,8 +9,6 @@ namespace SampleFunctions.InputBindings
 {
     public static class GetAccessTokenFn
     {
-        // This also shows route constraints guid vs int
-
         [FunctionName("H_AT_SayHi")]
         public static IActionResult GetStudentById(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "hello")] HttpRequest req
