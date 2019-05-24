@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 namespace SampleFunctions._02_InputBindings.Binding
 {
     /// <summary>
-    /// A custom attribute that lets you pass a JWT Token into an function definition.
     /// MUST have a HttpRequest type on the HttpTrigger.  And JWT Token must be in
     /// Authorization header
     /// </summary>
